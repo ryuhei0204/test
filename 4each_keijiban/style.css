@@ -1,0 +1,96 @@
+.menu{
+    background-color:black;
+    height:45px;
+}
+.menu li{
+    float:left;
+    list-style:none;
+    line-height:45px;
+    padding-right:45px;
+    color:white;
+}
+
+main{
+    clear:both;
+}
+.main-container{
+    width:95%;
+    margin:0 auto;
+    margin-top:70px;
+}
+
+.left{
+    float:left;
+    width:80%;
+    height:100%;
+    margin-bottom:40px;
+}
+
+.right{
+    float:left;
+    /*background-color:chartreuse;*/
+    width:20%;
+    height:100%;
+    margin-bottom:40px;
+    
+}
+form{
+    background-color:#eeeeee;
+    border:3px solid #cccccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+form div{
+    padding:15px;
+}
+
+form h3{
+    border-left:4px solid red;
+    margin-left:15px;
+    padding-left: 5px;
+}
+
+
+h1{
+    border-left:4px solid black;
+    border-bottom:2px solid black;
+}
+
+.user1{
+    background-color:#eeeeee;
+    border:3px solid #cccccc;
+    margin-top:20px;
+    }
+.user2{
+    background-color:#eeeeee;
+    border:3px solid #cccccc;
+    margin-top:20px;
+}
+
+.rightmenu{
+    list-style:none;
+}
+
+ div h2{
+    border-bottom:2px solid #cccccc;
+}
+
+footer{
+    clear:left;
+    width:100%;
+    height:60px;
+    bottom;0;
+    left:0px;
+    color:white;
+    background-color:black;
+    text-align:center;
+    line-height:60px;
+    
+}
+
+.submit{
+    border:1px solid #bbbbbb;
+    color:white;
+    background-color:gray;
+    border-bottom:2px solid #aaaaaa;
+    }
