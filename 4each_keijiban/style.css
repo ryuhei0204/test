@@ -28,7 +28,6 @@ main{
 
 .right{
     float:left;
-    /*background-color:chartreuse;*/
     width:20%;
     height:100%;
     margin-bottom:40px;
@@ -61,11 +60,7 @@ h1{
     border:3px solid #cccccc;
     margin-top:20px;
     }
-.user2{
-    background-color:#eeeeee;
-    border:3px solid #cccccc;
-    margin-top:20px;
-}
+
 
 .rightmenu{
     list-style:none;

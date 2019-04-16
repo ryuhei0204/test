@@ -6,9 +6,16 @@
         <title>4eachblog 掲示板</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    
+    <body>
+    <?php
+    mb_internal_encoding("UTF-8");
+    $pdo=new PDO("mysql:dbname=nishihara3;host=localhost;","root","mysql");
+    $stmt=$pdo->query("select*from 4each_keijiban");
+    ?>
 <header>
    <img src="4eachblog_logo.jpg">
-    <ul class="menu">
+    <ul class="menu">s
         <li>トップ</li>
         <li>プロフィール</li>
         <li>4eachについて</li>
@@ -41,21 +48,20 @@
                <input type="submit"class="submit"value="投稿する">
            </div>
            </form>
-           <div class="user1">
-           <h2>タイトル</h2>
-           記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、記事の中身、
-           <br>
-           <h5>by 通りすがり</h5>
-           </div>
+           <?Php
+           while($row =$stmt->fetch()){
+           echo "<div class='user1'>";
+           echo "<h2>".$row['title']."</h2>";
+           echo $row['comments'];
+           echo "<br>";
+           echo "<h5>posted by".$row['handlename']."</h5>";
+           echo "</div>";
+           }
+           ?>
            
-           <div class="user2">
-           <h2>タイトル</h2>
-           記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。 記事の中身。
+           
+           </div>
         
-           <h5>by　通りすがり</h5>
-           </div>
-           </div>
-           
        <div class="right">
        <ul class="rightmenu">
        <h2>人気の記事</h2>
@@ -84,4 +90,5 @@
     <footer>
         copyright internous|4sach blog is the one which provides A to Z about programming.
     </footer>
+    </body>
 </html>
