@@ -1,0 +1,5 @@
+package com.interousdev.login.util;
+
+public class DBConnector {
+
+}
