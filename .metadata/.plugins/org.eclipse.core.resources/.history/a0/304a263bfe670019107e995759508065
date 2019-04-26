@@ -15,7 +15,7 @@ public class HelloStrutsDAO {
 		String sql="select*from users";
 		try{
 			PreparedStatement ps=con.prepareStatement(sql);
-			ResultSet rs=ps.executeQuery();
+			ResultSet rs=ps.exesuteQuery();
 			if(rs.next()){
 				ret=true;
 			}
