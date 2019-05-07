@@ -1,4 +1,4 @@
-package com.internosudev.webproj2.dao;
+package com.internousdev.webproj2.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,6 +19,11 @@ public class HelloStrutsDAO {
 			if(rs.next()){
 				ret=true;
 			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		try{
+			con.close();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
