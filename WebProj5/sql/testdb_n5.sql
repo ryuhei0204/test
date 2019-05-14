@@ -3,8 +3,8 @@ create database testdb_n5;
 use testdb_n5;
 
 create table users(
-users_id int primary key auto_increment,
-users_name varchar(255),
+user_id int primary key auto_increment,
+user_name varchar(255),
 password varchar(255)
 );
 
