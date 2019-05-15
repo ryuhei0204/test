@@ -1,0 +1,9 @@
+package com.internousdev.template.action;
+
+public class HomeAction {
+
+	public HomeAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

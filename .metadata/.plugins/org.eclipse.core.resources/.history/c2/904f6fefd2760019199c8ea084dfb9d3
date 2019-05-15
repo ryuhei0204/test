@@ -1,0 +1,9 @@
+package com.internousdev.template.dto;
+
+public class BuyItemDTO {
+
+	public BuyItemDTO() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
