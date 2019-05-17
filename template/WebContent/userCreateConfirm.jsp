@@ -95,6 +95,7 @@ table{
          </tr>
          <tr>
             <td>
+
                <s:submit value="完了"/>
             </td>
          </tr>

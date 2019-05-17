@@ -116,10 +116,11 @@ table{
       <a href='<s:url action="HomeAction"/>'>こちら</a>
     </div>
   </div>
+    </div>
   <div id="footer">
     <div id="pr">
     </div>
-  </div>
+
   </div>
 </body>
 </html>

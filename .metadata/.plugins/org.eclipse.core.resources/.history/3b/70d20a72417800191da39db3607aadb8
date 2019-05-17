@@ -1,0 +1,9 @@
+package com.internousdev.template.action;
+
+public class BuyItemConfirmAction {
+
+	public BuyItemConfirmAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
