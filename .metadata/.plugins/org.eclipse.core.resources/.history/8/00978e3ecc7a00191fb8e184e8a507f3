@@ -1,0 +1,9 @@
+package com.internousdev.ecsite.util;
+
+public class DBConnector {
+
+	public DBConnector() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
