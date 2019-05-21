@@ -1,0 +1,9 @@
+package com.internousdev.ecsite.action;
+
+public class UserCreateCompleteAction {
+
+	public UserCreateCompleteAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
