@@ -1,0 +1,9 @@
+package com.internousdev.ecsite.action;
+
+public class MyPageAction {
+
+	public MyPageAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

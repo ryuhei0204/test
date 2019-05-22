@@ -1,0 +1,9 @@
+package com.internousdev.ecsite.action;
+
+public class BuyItemAction {
+
+	public BuyItemAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

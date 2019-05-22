@@ -1,0 +1,9 @@
+package com.internousdev.ecsite.dto;
+
+public class MyPageDTO {
+
+	public MyPageDTO() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
