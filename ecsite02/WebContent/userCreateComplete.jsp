@@ -10,7 +10,7 @@
 <meta  http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
-<title>UserCreateComfirm画面</title>
+<title>UserCreateComplete画面</title>
 
 <style type="text/css">
 
@@ -64,45 +64,16 @@
    </div>
    <div id="main">
       <div id="top">
-         <p>UserCreateConfirm</p>
+         <p>UserCreateComplete</p>
       </div>
       <div>
-         <h3>登録する内容は以下でよろしいですか。</h3>
-         <table>
-            <s:form action="UserCreateCompleteAction">
-            <tr id="box">
-               <td>
-                  <label>ログインID:</label>
-               </td>
-               <td>
-                  <s:property value="loginUserId" escape="false"/>
-               </td>
-            </tr>
-            <tr id="box">
-               <td>
-                  <label>ログインPASS:</label>
-               </td>
-               <td>
-                  <s:property value="loginPassword" escape="false"/>
-               </td>
-            </tr>
-            <tr id="box">
-               <td>
-                  <label>ユーザー名:</label>
-               </td>
-               <td>
-                  <s:property value="userName" escape="false"/>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <s:submit value="完了"/>
-               </td>
-            </tr>
-         </s:form>
-         </table>
+         <h3>ユーザーの登録が完了致しました。</h3>
+         <div>
+            <a href='<s:url action="HomeAction"/>'>ログインへ</a>
+         </div>
       </div>
    </div>
+
    <div id="footer">
       <div id="pr">
       </div>

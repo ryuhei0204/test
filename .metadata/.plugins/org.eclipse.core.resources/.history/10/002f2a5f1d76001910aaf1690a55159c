@@ -1,9 +1,0 @@
-package com.internousdev.webproj5.action;
-
-public class TestAction {
-
-	public TestAction() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}
