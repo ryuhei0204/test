@@ -14,13 +14,18 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 
 	public String execute(){
 		result=SUCCESS;
-
+        //buyItem.jspのstockの値をsession.put
 		session.put("stock", stock);
+		//整数から文字列に変換
 		int intStock=Integer.parseInt(session.get("stock").toString());
 		int intPrice=Integer.parseInt(session.get("buyItem_price").toString());
+
+		//"buyItem_price"を上書き *別のkeyの使用でもいける(jspファイルと名前が一致しないとエラーになる)
 		session.put("buyItem_price",intStock*intPrice);
 		String payment;
 
+		//buyItem.jspで"1"を選択した場合payment="現金払い"
+		//"1"でない場合payment="クレジットカード"
 		if(pay.equals("1")){
 			payment="現金払い";
 			session.put("pay",payment);
@@ -30,6 +35,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 		}
 		return result;
 	}
+
 	public int getStock(){
 		return stock;
 	}

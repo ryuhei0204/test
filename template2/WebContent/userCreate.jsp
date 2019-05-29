@@ -67,6 +67,7 @@ table{
       <p>UserCreate</p>
     </div>
     <div>
+<!--     errorメッセージを表示させる -->
     <s:if test="errorMessage !=''">
       <s:property value="errorMessage" escape="false"/>
     </s:if>

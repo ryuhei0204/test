@@ -10,12 +10,14 @@ import com.internousdev.template.util.DateUtil;
 public class BuyItemCompleteDAO {
 	private DateUtil dateUtil=new DateUtil();
 
+	//user_item_transactionのitem_transaction_id,total_price,total_count,user_master_id,pay,insert_dateのなかに(?,?,?,?,?,?)をいれる
 	private String sql ="INSERT INTO user_buy_item_transaction(item_transaction_id,total_price,total_count,user_master_id,pay,insert_date)VALUES(?,?,?,?,?,?)";
-
+    //buyItemInfoの作成
 	public void buyItemInfo(String item_transaction_id,String user_master_id,String total_price,String total_count,String pay)throws SQLException{
 		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
 		try{
+			//?に挿入するための文
 			PreparedStatement preparedStatement=connection.prepareStatement(sql);
 			preparedStatement.setString(1, item_transaction_id);
 			preparedStatement.setString(2,total_price);

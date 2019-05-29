@@ -1,9 +1,0 @@
-package com.internousdev.ecsite.dao;
-
-public class LoginDAO {
-
-	public LoginDAO() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}

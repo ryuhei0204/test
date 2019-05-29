@@ -1,9 +1,0 @@
-package com.internousdev.ecsite.action;
-
-public class GoHomeAction {
-
-	public GoHomeAction() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}

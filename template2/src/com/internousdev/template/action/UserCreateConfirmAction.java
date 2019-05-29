@@ -14,6 +14,8 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 
 	public String execute(){
 		String result=SUCCESS;
+
+		//UserCreate.jspに入力された値が空でなければ session.put()を実行する
 		if(!(loginUserId.equals(""))
 		&&!(loginPassword.equals(""))
 		&&!(userName.equals(""))){
@@ -21,11 +23,13 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);
 		}else{
+	    //空ならばエラーメッセージでsetErrorMessage()を表示させる
 			setErrorMessage("未入力の項目があります。");
 			result=ERROR;
 		}
 		return result;
 	}
+
 	public String getLoginUserId(){
 		return loginUserId;
 	}
