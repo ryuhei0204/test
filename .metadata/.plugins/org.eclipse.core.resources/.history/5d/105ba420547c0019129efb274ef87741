@@ -1,9 +1,0 @@
-package com.internousdev.ecsite.dao;
-
-public class BuyItemCompleteDAO {
-
-	public BuyItemCompleteDAO() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}

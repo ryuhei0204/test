@@ -1,0 +1,9 @@
+package com.internousdev.red.action;
+
+public class CreateUserAction {
+
+	public CreateUserAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}
