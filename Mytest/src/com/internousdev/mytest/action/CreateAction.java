@@ -1,0 +1,92 @@
+package com.internousdev.mytest.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateAction extends ActionSupport {
+	private String sei;
+	private String mei;
+	private String seikana;
+	private String meikana;
+	private String mail;
+	private int seibetu;
+	private String userName;
+	private String userId;
+	private String password;
+
+	public String execute() {
+		return SUCCESS;
+	}
+
+	public String getSei() {
+		return sei;
+	}
+
+	public void setSei(String sei) {
+		this.sei = sei;
+	}
+
+	public String getMei() {
+		return mei;
+	}
+
+	public void setMei(String mei) {
+		this.mei = mei;
+	}
+
+	public String getSeikana() {
+		return seikana;
+	}
+
+	public void setSeikana(String seikana) {
+		this.seikana = seikana;
+	}
+
+	public String getMeikana() {
+		return meikana;
+	}
+
+	public void setMeikana(String meikana) {
+		this.meikana = meikana;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public int getSeibetu() {
+		return seibetu;
+	}
+
+	public void setSeibetu(int seibetu) {
+		this.seibetu = seibetu;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.internousdev.mytest.action;
+
+public class CreateConfirmAction {
+
+	public CreateConfirmAction() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

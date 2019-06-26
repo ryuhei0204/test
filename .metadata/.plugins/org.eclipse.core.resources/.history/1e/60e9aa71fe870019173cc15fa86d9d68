@@ -1,9 +1,0 @@
-package com.internousdev.teamtest.dao;
-
-public class UserInfoDAO {
-
-	public UserInfoDAO() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}

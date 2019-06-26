@@ -1,0 +1,29 @@
+package com.internousdev.mytest.action;
+
+import com.internousdev.mytest.dao.LoginDAO;
+import com.opensymphony.xwork2.ActionSupport;
+public class CreateCompleteAction extends ActionSupport{
+
+	String result;
+	int check;
+
+	private String sei;
+	private String mei;
+	private String seikana;
+	private String meikana;
+	private String mail;
+	private int seibetu;
+	private String userId;
+	private String password;
+
+	public String execute(){
+		LoginDAO dao = new LoginDAO();
+		check = dao.CreateInfo(sei,mei,seikana,meikana,mail,seibetu,userId,password);
+
+		if(check > 0){
+			result = SUCCESS;
+	}
+
+		return result;
+}
+}

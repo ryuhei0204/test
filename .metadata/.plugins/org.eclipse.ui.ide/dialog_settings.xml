@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="CleanDialogSettings">
-		<item value="662" key="DIALOG_WIDTH"/>
+		<item value="901" key="DIALOG_WIDTH"/>
 		<item value="false" key="TOGGLE_SELECTED"/>
 		<item value="423" key="DIALOG_HEIGHT"/>
 		<item value="629" key="DIALOG_X_ORIGIN"/>
@@ -13,6 +13,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\internousdev\Desktop\workspace\workspeace_nishihara\red"/>
+			<item value="C:\Users\internousdev\Desktop\workspace\workspeace_nishihara\test\red"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspece_nishihara\test\WebProj4"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspece_nishihara\test\WebProj3"/>
 		</list>

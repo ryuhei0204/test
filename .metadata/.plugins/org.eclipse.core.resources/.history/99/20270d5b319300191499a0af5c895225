@@ -1,0 +1,20 @@
+package com.internousdev.mytest.dao;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.internousdev.mytest.util.DBConnector;
+import java.sql.Connection;
+import com.internousdev.mytest.dto.LoginDTO;
+import java.sql.PreparedStatement;
+
+public class LoginDAO {
+	private DBConnector db = new DBConnector();
+	private Connection con = db.getConnection();
+
+	public LoginDTO loginUserGet(String loginUserId, String loginPassword){
+		String sql = "select*from login_user_db where login_id = ? and login = pass = ?";
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+		}
+	}
+
+}

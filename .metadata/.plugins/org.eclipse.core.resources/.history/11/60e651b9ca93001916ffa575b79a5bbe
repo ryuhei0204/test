@@ -1,0 +1,23 @@
+package com.internousdev.mytest.action;
+
+import com.internousdev.mytest.dao.LoginDAO;
+import com.internousdev.mytest.dto.LoginDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginConfirmAction extends ActionSupport{
+	private LoginDTO logindto = new LoginDTO();
+	private String loginUser;
+	private String loginPassword;
+
+	public String execute(){
+		String result = ERROR;
+
+		logindto = LoginDAO.loginInfo(loginUser, loginPassword);
+			if(loginUser.equals(logindto.getLogId()) && loginPassword.equals(logindto.getLogPass())){
+				result = SUCCESS;
+			}
+
+		}
+	}
+
+

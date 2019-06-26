@@ -1,0 +1,16 @@
+package com.internousdev.mytest.action;
+
+import com.internousdev.mytest.dao.CreateDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateConfirmAction extends ActionSupport{
+
+	public String execute(){
+		String result = ERROR;
+
+		if(CreateDAO.CreateInfo(userId)){
+			userError = "既に存在するユーザーIDです。";
+		}
+	}
+
+}

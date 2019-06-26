@@ -1,0 +1,9 @@
+package com.internousdev.mytest.dao;
+
+public class CreateDAO {
+
+	public CreateDAO() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
+}

@@ -4,4 +4,36 @@
 		<item value="-3" key="DIALOG_X_ORIGIN"/>
 		<item value="286" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="createError" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="package com.internousdev.mytest.action;"/>
+			<item value="errorMessage"/>
+			<item value="&amp;&amp;"/>
+			<item value="emessage"/>
+			<item value="Cart"/>
+			<item value="AddCartAction"/>
+			<item value="Form"/>
+			<item value="success"/>
+		</list>
+		<list key="replacehistory">
+			<item value="createError"/>
+			<item value="||"/>
+			<item value="errorMessage"/>
+			<item value="countCheck"/>
+			<item value="countChecek"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="377" key="DIALOG_WIDTH"/>
+		<item value="1|メイリオ|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|メイリオ" key="DIALOG_FONT_NAME"/>
+		<item value="411" key="DIALOG_HEIGHT"/>
+		<item value="620" key="DIALOG_X_ORIGIN"/>
+		<item value="164" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

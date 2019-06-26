@@ -1,0 +1,15 @@
+package com.internousdev.mytest.dto;
+
+public class CreateDTO {
+	private String logId;
+
+	public String getLogId() {
+		return logId;
+	}
+
+	public void setLogId(String logId) {
+		this.logId = logId;
+	}
+
+
+}

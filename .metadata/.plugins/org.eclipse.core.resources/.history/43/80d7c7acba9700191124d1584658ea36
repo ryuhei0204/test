@@ -1,0 +1,96 @@
+package com.internousdev.mytest.action;
+
+import com.internousdev.mytest.dao.LoginDAO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateCompleteAction extends ActionSupport {
+
+	String result;
+	int check;
+
+	private String sei;
+	private String mei;
+	private String seikana;
+	private String meikana;
+	private String mail;
+	private int seibetu;
+	private String userId;
+	private String password;
+
+	public String execute() {
+		LoginDAO dao = new LoginDAO();
+		check = dao.CreateInfo(sei, mei, seikana, meikana, mail, seibetu, userId, password);
+
+		if (check > 0) {
+			result = SUCCESS;
+		}
+
+		return result;
+	}
+
+	public String getSei() {
+		return sei;
+	}
+
+	public void setSei(String sei) {
+		this.sei = sei;
+	}
+
+	public String getMei() {
+		return mei;
+	}
+
+	public void setMei(String mei) {
+		this.mei = mei;
+	}
+
+	public String getSeikana() {
+		return seikana;
+	}
+
+	public void setSeikana(String seikana) {
+		this.seikana = seikana;
+	}
+
+	public String getMeikana() {
+		return meikana;
+	}
+
+	public void setMeikana(String meikana) {
+		this.meikana = meikana;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public int getSeibetu() {
+		return seibetu;
+	}
+
+	public void setSeibetu(int seibetu) {
+		this.seibetu = seibetu;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+}

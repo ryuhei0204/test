@@ -1,0 +1,13 @@
+package com.internousdev.mytest.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class CreateConfirmAction extends ActionSupport{
+
+	public String execute(){
+		String result = ERROR;
+
+		if()
+	}
+
+}

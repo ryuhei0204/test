@@ -1,0 +1,47 @@
+package com.internousdev.mytest.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.internousdev.mytest.dto.CreateDTO;
+import com.internousdev.mytest.util.DBConnector;
+
+public class CreateDAO {
+	private DBConnector db = new DBConnector();
+	private Connection con =db.getConnection();
+	private CreateDTO dto = new CreateDTO();
+
+	public CreateDTO CreateInfo(String loginUserId){
+		String sql = "select*from login_user_db where login_id = ?";
+		try{
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setString(1, loginUserId);
+
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()){
+				dto.setLogId(rs.getString("login_id"));
+			}
+
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try{con.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+		return dto;
+
+
+}
+
+	public CreateDTO getDto() {
+		return dto;
+	}
+
+	public void setDto(CreateDTO dto) {
+		this.dto = dto;
+	}

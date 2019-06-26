@@ -1,9 +1,0 @@
-package com.internousdev.teamtest.action;
-
-public class CreateUserAction extends ActionSupport{
-	public String execute(){
-		return SUCCESS;
-	}
-	
-
-}

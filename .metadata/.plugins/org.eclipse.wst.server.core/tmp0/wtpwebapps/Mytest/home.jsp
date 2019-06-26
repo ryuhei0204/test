@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HOME画面</title>
+</head>
+<body>
+<h1>HOME</h1>
+<form action = "LoginAction" method = "post">
+<input type = "submit" value = "ログイン">
+</form>
+<form action = "CreateAction" method = "post">
+<input type ="submit" value ="新規登録">
+</form>
+<input type = "button" onclick="location.href='CreateAction'" value = "新規登録"/>
+</body>
+</html>
