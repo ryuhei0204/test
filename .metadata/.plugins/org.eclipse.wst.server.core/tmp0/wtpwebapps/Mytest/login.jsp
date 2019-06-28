@@ -15,7 +15,7 @@
 <form action = "LoginConfirmAction" method = "post">
 <table>
    <tr>
-      <td><input type = "text" name = "userId" value = "<s:property value = 'userId'/>" placeholder = "ユーザーID"/></td>
+      <td><input type = "text" name = "mixuser" value = "<s:property value = 'mixuser'/>" placeholder = "ユーザーID又はユーザー名"/></td>
    </tr>
    <tr>
       <td><input type = "password" name = "password" value = "" placeholder = "パスワード"/></td>

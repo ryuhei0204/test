@@ -23,3 +23,16 @@ create table login_user_db(
    );
 
    insert into login_user_db(login_id, login_pass, user_name, email, family_name, first_name, family_name_kana, first_name_kana,sex, insert_date, updated_date)values("test","123","taro","taro123@gmail.com", "山田", "太郎", "やまだ","たろう",0,now(),now());
+
+ drop table if exists contact_form;
+
+ create table contact_form(
+ id int not null primary key auto_increment,
+ contact_name varchar(16) unique,
+ contact_mail varchar(50),
+ contact_tel varchar(16),
+ title varchar(50),
+ contents varchar(2000),
+ insert_date datetime,
+ updated_date datetime
+ );()

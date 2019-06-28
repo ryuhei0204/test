@@ -4,7 +4,7 @@ public class LoginDTO {
 	private int id;
 	private String logId;
 	private String logPass;
-	private String username;
+	private String logName;
 
 	public int getId() {
 		return id;
@@ -30,12 +30,12 @@ public class LoginDTO {
 		this.logPass = logPass;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getLogName() {
+		return logName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setLogName(String logName) {
+		this.logName = logName;
 	}
 
 }

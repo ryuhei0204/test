@@ -5,79 +5,50 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.internousdev.mytest.dto.LoginDTO;
 import com.internousdev.mytest.util.DBConnector;
 
 public class LoginDAO {
-	private DBConnector db = new DBConnector();
-	private Connection con = db.getConnection();
-	private LoginDTO dto = new LoginDTO();
 
-	//ログイン
-	public LoginDTO loginInfo(String loginUserId, String loginPassword){
-		String sql = "select*from login_user_db where login_id = ? and login_pass = ?";
-		try{
+	private boolean userExist;
+
+	// ログイン
+	public boolean loginInfo(String loginUser, String loginPassword) {
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		String sql = "select login_id, user_name, login_pass from login_user_db where (login_id = ? or user_name = ?) and login_pass = ?";
+
+		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 
-			ps.setString( 1, loginUserId);
-			ps.setString(2, loginPassword);
+			ps.setString(1, loginUser);
+			ps.setString(2, loginUser);
+			ps.setString(3, loginPassword);
 
 			ResultSet rs = ps.executeQuery();
-			if(rs.next()){
-				dto.setLogId(rs.getString("login_id"));
-				dto.setLogPass(rs.getString("login_pass"));
+			if (rs.next()) {
+
+				userExist = true;
 			}
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
-		}finally{
-			try{
+		} finally {
+			try {
 				con.close();
-			}catch(SQLException e){
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		return dto;
+		return userExist;
 	}
 
-	public LoginDTO CountInfo(String loginUserId){
-		String sql = "select count(*) as count from  login_user_db where login_id=?";
-		try{
-			PreparedStatement ps = con.prepareStatement(sql);
-
-			ps.setString(1, loginUserId);
-
-			ResultSet rs = ps.executeQuery();
-			if(rs.next()){
-				dto.setLogId(rs.getString("login_id"));
-			}
-
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			try{con.close();
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-	}
-		return dto;
-
-}
-
-	public LoginDTO getDto() {
-		return dto;
-	}
-
-	public void setDto(LoginDTO dto) {
-		this.dto = dto;
-	}
-
-	//ユーザー登録
-  public int CreateInfo(String sei, String mei, String seikana, String meikana, String mail, int seibetu, String userName, String userId, String password){
-	  DBConnector db = new DBConnector();
+	// ユーザー登録
+	public int CreateInfo(String sei, String mei, String seikana, String meikana, String mail, int seibetu,
+			String userName, String userId, String password) {
+		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
-		String  sql = "insert into login_user_db(login_id, login_pass, user_name, email, family_name, first_name, family_name_kana, first_name_kana,sex, insert_date, updated_date)values(?,?,?,?,?,?,?,?,?,now(),now())";
+		String sql = "insert into login_user_db(login_id, login_pass, user_name, email, family_name, first_name, family_name_kana, first_name_kana,sex, insert_date, updated_date)values(?,?,?,?,?,?,?,?,?,now(),now())";
 		int count = 0;
-		try{
+		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userId);
 			ps.setString(2, password);
@@ -89,20 +60,44 @@ public class LoginDAO {
 			ps.setString(8, meikana);
 			ps.setInt(9, seibetu);
 
-
-
 			count = ps.executeUpdate();
-		}catch(SQLException e){
+		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally{
-			try{
+		} finally {
+			try {
 				con.close();
 
-			}catch(SQLException e){
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
 		return count;
-  }
-}
+	}
 
+	public int ContactInfo(String conname, String conmail, String contel, String title, String contents) {
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		String sql = "insert into contact_form(contact_name,contact_mail,contact_tel,title,contents,insert_date,updated_date)value(?,?,?,?,?,now(),now())";
+		int count = 0;
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, conname);
+			ps.setString(2, conmail);
+			ps.setString(3, contel);
+			ps.setString(4, title);
+			ps.setString(5, contents);
+
+			count = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
+	}
+
+}

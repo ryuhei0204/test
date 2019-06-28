@@ -1,0 +1,33 @@
+package com.internousdev.mytest.action;
+import com.opensymphony.xwork2.ActionSupport;
+import java.util.Map;
+import java.util.Objects;
+import org.apache.struts2.interceptor.SessionAware;
+
+public class ContactCompleteAction extends ActionSupport implements SessionAware{
+
+	private String conname;
+	private String conmail;
+	private String contel;
+	private String title;
+	private String contents;
+	private Map<String,Object>session;
+
+	public String execute(){
+
+		conname = String.valueOf(session.get("contactname"));
+		conmail = String.valueOf(session.get("contactmail"));
+		contel = String.valueOf(session.get("contacttel"));
+		title = String.valueOf(session.get("title"));
+		contents = String.valueOf(session.get("contents"));
+
+		session.remove("contactname");
+		session.remove("contactmail");
+		session.remove("contacttel");
+		session.remove("title");
+		session.remove("contents");
+		return SUCCESS;
+	}
+
+
+}

@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Desktop\workspace\workspeace_nishihara\sample-web"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspeace_nishihara\red"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspeace_nishihara\test\red"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspece_nishihara\test\WebProj4"/>

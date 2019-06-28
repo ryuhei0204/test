@@ -1,9 +1,0 @@
-package com.internousdev.mytest.dto;
-
-public class LoginDTO {
-
-	public LoginDTO() {
-		// TODO 自動生成されたコンストラクター・スタブ
-	}
-
-}

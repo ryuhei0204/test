@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>内容確認画面</title>
+</head>
+<body>
+	<script src="./js/button.js"></script>
+	<h1>以下の内容でよろしいでしょうか？</h1>
+	<form>
+		<table>
+			<tr>
+				<td><label>名前</label></td>
+				<td><s:property value="contactname" /></td>
+			</tr>
+
+			<tr>
+				<td><label>メールアドレス</label></td>
+				<td><s:property value="contactmail" /></td>
+			</tr>
+
+			<s:if test="%{contacttel}">
+				<tr>
+					<td><label>電話番号</label></td>
+					<td><s:property value="contacttel" /></td>
+				</tr>
+			</s:if>
+			<s:else>
+				<tr>
+					<td><label>電話番号は登録されていません。</label></td>
+				</tr>
+			</s:else>
+			<tr>
+				<td><label>タイトル</label></td>
+				<td><s:property value="title" /></td>
+			</tr>
+
+			<tr>
+				<td><label>内容</label></td>
+				<td><s:property value="contents" /></td>
+			</tr>
+		</table>
+		<input type="button"
+			onclick="formSubmit(this,'ContactCompleteAction')" value="受付完了" /> <input
+			type="button" onclick="formSubmit(this,'ContactAction')" value="戻る" />
+
+	</form>
+</body>
+</html>

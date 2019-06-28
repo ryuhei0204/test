@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
 <fullyQualifiedTypeName name="com.internousdev.mytest.dto.LoginDTO"/>
 <fullyQualifiedTypeName name="com.internousdev.mytest.util.DBConnector"/>
@@ -13,4 +12,5 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.mytest.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.sun.media.sound.SoftSynthesizer"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

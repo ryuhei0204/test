@@ -1,0 +1,54 @@
+package com.internousdev.mytest.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ContactConfirmAction extends ActionSupport {
+	private String contactname;
+	private String contactmail;
+	private String title;
+	private String contents;
+
+	public String execute() {
+		String result = ERROR;
+
+		if (!(contactname.isEmpty() && contactmail.isEmpty() && title.isEmpty() && contents.isEmpty())) {
+			result = SUCCESS;
+		}else{
+			setMassage("必須項目を入力してください");
+		}
+		return result;
+
+	}
+
+	public String getContactname() {
+		return contactname;
+	}
+
+	public void setContactname(String contactname) {
+		this.contactname = contactname;
+	}
+
+	public String getContactmail() {
+		return contactmail;
+	}
+
+	public void setContactmail(String contactmail) {
+		this.contactmail = contactmail;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContents() {
+		return contents;
+	}
+
+	public void setContents(String contents) {
+		this.contents = contents;
+	}
+}

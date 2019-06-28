@@ -17,13 +17,13 @@
 <body>
 <table>
    <tr>
-      <td><label>ユーザー名</label></td>
-      <td><s:property value = "userId"/></td>
+      <td><label>ユーザーID</label></td>
+      <td><s:property value = "mixuser"/></td>
    </tr>
-   <tr>
-      <td><label>struts無しユーザー名</label></td>
-      <td><p><%= userId %></p></td>
-   </tr>
+<!--    <tr> -->
+<!--       <td><label>struts無しユーザー名ID</label></td> -->
+<%--       <td><p><%= mixuser %></p></td> --%>
+<!--    </tr> -->
    <tr>
       <td><label>パスワード</label></td>
       <td><s:property value = "password"/></td>

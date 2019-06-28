@@ -8,11 +8,12 @@
 <title>新規登録画面</title>
 </head>
 <body>
+<script src = "./js/button.js"></script>
 <h1>新規登録画面</h1>
 <s:if test = "!(createError.isEmpty()) && createError != null">
   <s:property value = "createError"/>
 </s:if>
-<form action = "CreateConfirmAction" method = "post">
+<form>
   <table>
      <tr>
         <th>姓</th>
@@ -61,11 +62,13 @@
         <th>パスワード</th>
         <td><input type = "password" name = "password" value = ""/></td>
      </tr>
+ </table>
 
-     <tr>
-       <td><input type = "submit" value = "確認"/></td>
-     </tr>
-  </table>
+       <input type = "button" onclick = "formSubmit(this,CreateConfirmAction)" value = "確認"/><br>
+       <a href = '<s:url action = "LoginAction"/>'>ログイン</a><label>はこちら</label>
+
+
+
 </form>
 </body>
 </html>
